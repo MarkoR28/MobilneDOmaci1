@@ -9,31 +9,21 @@ class PacijentViewModel : ViewModel(){
     private val pacijentList : MutableList<Pacijent> = mutableListOf()
     private val pacijenti : MutableLiveData<List<Pacijent>> = MutableLiveData()
 
-    /*init {
+    init {
         for(i in 0..20){
             val pacijent = Pacijent(
                 i,
                 "",
                 "Pacijent$i",
             "Prezime$i",
-                "Nije zdrav"
+                "Nije zdrav$i"
             )
             pacijentList.add(pacijent)
         }
         pacijenti.value = pacijentList
-    }*/
+    }
     fun getPacijenti() : LiveData<List<Pacijent>>{
-        for(i in 0..20){
-            val pacijent = Pacijent(
-                i,
-                "",
-                "Pacijent$i",
-                "Prezime$i",
-                "Nije zdrav"
-            )
-            pacijentList.add(pacijent)
-        }
-        pacijenti.value = pacijentList
+
         return pacijenti
     }
 

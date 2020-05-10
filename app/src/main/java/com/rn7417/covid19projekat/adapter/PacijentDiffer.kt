@@ -9,7 +9,7 @@ class PacijentDiffer : DiffUtil.ItemCallback<Pacijent>(){
     }
 
     override fun areContentsTheSame(oldItem: Pacijent, newItem: Pacijent): Boolean {
-        return oldItem.name == newItem.name && oldItem.lastname == newItem.lastname && oldItem.stanje == newItem.stanje
+        return oldItem.name == newItem.name && oldItem.lastname == newItem.lastname
     }
 
 }
