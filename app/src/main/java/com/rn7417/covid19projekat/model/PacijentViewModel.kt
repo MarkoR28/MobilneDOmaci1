@@ -10,13 +10,36 @@ class PacijentViewModel : ViewModel(){
     private val pacijenti : MutableLiveData<List<Pacijent>> = MutableLiveData()
 
     init {
-        for(i in 0..20){
+        for(i in 0..5){
             val pacijent = Pacijent(
                 i,
-                "",
+                "https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png",
                 "Pacijent$i",
             "Prezime$i",
-                "Nije zdrav$i"
+                "Ceka$i",
+                "jedan"
+            )
+            pacijentList.add(pacijent)
+        }
+        for(i in 6..11){
+            val pacijent = Pacijent(
+                i,
+                "https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png",
+                "Pacijent$i",
+                "Prezime$i",
+                "Za hospitalizaciju$i",
+                "dva"
+            )
+            pacijentList.add(pacijent)
+        }
+        for(i in 12..20){
+            val pacijent = Pacijent(
+                i,
+                "https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png",
+                "Pacijent$i",
+                "Prezime$i",
+                "Otpisani$i",
+                "tri"
             )
             pacijentList.add(pacijent)
         }
@@ -32,5 +55,6 @@ class PacijentViewModel : ViewModel(){
         }
         pacijenti.value = filteredList
     }
+
 
 }

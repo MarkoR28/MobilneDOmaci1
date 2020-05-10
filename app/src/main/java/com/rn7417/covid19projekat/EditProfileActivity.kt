@@ -40,7 +40,7 @@ class EditProfileActivity : AppCompatActivity(R.layout.activity_edit_profile) {
                         if(bolnicaTv.text.isNotEmpty()){
                             val settings = getSharedPreferences("sharedPreferences", Context.MODE_PRIVATE)
                             val editor = settings.edit()
-                            editor.clear()
+                            //editor.clear()
                             editor.putBoolean("isLogged", true)
                             editor.putString("firstname", firstnameeditTv.text.toString())
                             editor.putString("lastname", lastnameeditTv.text.toString())

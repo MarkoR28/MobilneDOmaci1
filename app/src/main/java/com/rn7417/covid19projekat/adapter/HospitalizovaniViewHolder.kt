@@ -7,7 +7,8 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.layout_pacijent_list_item.view.*
 
-class PacijentViewHolder(override val containerView: View) : RecyclerView.ViewHolder(containerView), LayoutContainer{
+class HospitalizovaniViewHolder (override val containerView: View) : RecyclerView.ViewHolder(containerView),
+    LayoutContainer {
 
     fun bind(pacijent: Pacijent){
         if (pacijent.picture.isNotEmpty()) {
@@ -16,7 +17,6 @@ class PacijentViewHolder(override val containerView: View) : RecyclerView.ViewHo
                 .into(containerView.pacijentPictureIv)
             containerView.recyclernameTv.text = pacijent.name
             containerView.recyclerlastnameTv.text = pacijent.lastname
-            containerView.recyclerbolnicaTv.text = pacijent.stanje
         }
 
     }

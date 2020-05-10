@@ -3,6 +3,7 @@ package com.rn7417.covid19projekat.fragments
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -27,17 +28,28 @@ class CekaonicaFragment : Fragment(R.layout.activity_cekaonica_fragment) {
 
     private fun init(){
         initRecycler()
+        initListener()
         initObservers()
-    }
 
+    }
+    private fun initListener(){
+        inputEt.doAfterTextChanged {
+            pacijentViewModel.filterPacijenti(it.toString())
+        }
+    }
     private fun initRecycler(){
         listRv.layoutManager = LinearLayoutManager(this.activity)
         pacijentAdapter = PacijentAdapter(PacijentDiffer())
         listRv.adapter = pacijentAdapter
     }
     private fun initObservers(){
-        pacijentViewModel.getPacijenti().observe(viewLifecycleOwner, Observer {
+        /*pacijentViewModel.getPacijenti().observe(viewLifecycleOwner, Observer {
             pacijentAdapter.submitList(it)
+        })*/
+        pacijentViewModel.getPacijenti().observe(viewLifecycleOwner, Observer {
+            pacijentAdapter.submitList(it.filter {
+                it.status.equals("jedan")
+            })
         })
     }
 

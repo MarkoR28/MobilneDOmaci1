@@ -18,4 +18,5 @@ class PacijentAdapter(pacijentdiffer :PacijentDiffer): ListAdapter<Pacijent, Pac
         val pacijent = getItem(position)
         holder.bind(pacijent)
     }
+
 }

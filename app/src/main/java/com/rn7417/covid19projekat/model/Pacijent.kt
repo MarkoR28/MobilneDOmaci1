@@ -5,5 +5,6 @@ data class Pacijent (
     val picture: String,
     val name: String,
     val lastname: String,
-    val stanje: String
+    val stanje: String,
+    val status: String
 )
