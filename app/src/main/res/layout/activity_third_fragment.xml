@@ -18,17 +18,17 @@
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="1"/>
+            android:text="Cekaonica"/>
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="2"/>
+            android:text="Hospitalizovani"/>
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="3"/>
+            android:text="Otpusteni"/>
 
     </com.google.android.material.tabs.TabLayout>
 

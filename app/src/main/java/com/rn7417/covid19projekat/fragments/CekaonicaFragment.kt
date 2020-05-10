@@ -28,6 +28,7 @@ class CekaonicaFragment : Fragment(R.layout.activity_cekaonica_fragment) {
     private fun init(){
         initListeners()
         initRecycler()
+        initObservers()
     }
 
     private fun initListeners(){}
@@ -37,7 +38,7 @@ class CekaonicaFragment : Fragment(R.layout.activity_cekaonica_fragment) {
         listRv.adapter = pacijentAdapter
     }
     private fun initObservers(){
-        pacijentViewModel.getPacijenti().observe(this, Observer {
+        pacijentViewModel.getPacijenti().observe(viewLifecycleOwner, Observer {
             pacijentAdapter.submitList(it)
         })
     }
