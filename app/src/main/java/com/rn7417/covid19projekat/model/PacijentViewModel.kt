@@ -26,5 +26,11 @@ class PacijentViewModel : ViewModel(){
 
         return pacijenti
     }
+    fun filterPacijenti(filter:String){
+        val filteredList = pacijentList.filter {
+            it.name.toLowerCase().contains(filter.toLowerCase())
+        }
+        pacijenti.value = filteredList
+    }
 
 }

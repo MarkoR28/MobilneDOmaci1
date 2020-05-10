@@ -26,12 +26,10 @@ class CekaonicaFragment : Fragment(R.layout.activity_cekaonica_fragment) {
     }
 
     private fun init(){
-        initListeners()
         initRecycler()
         initObservers()
     }
 
-    private fun initListeners(){}
     private fun initRecycler(){
         listRv.layoutManager = LinearLayoutManager(this.activity)
         pacijentAdapter = PacijentAdapter(PacijentDiffer())
