@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottomStanje"
+        android:title="Stanje"
+        android:icon="@drawable/ic_info_black_24dp"/>
+    <item
+        android:id="@+id/bottomUnos"
+        android:title="Unos"
+        android:icon="@drawable/ic_person_add_black_24dp"/>
+    <item
+        android:id="@+id/bottomListe"
+        android:title="Liste"
+        android:icon="@drawable/ic_format_list_bulleted_black_24dp"/>
+    <item
+        android:id="@+id/bottomProfil"
+        android:title="Profil"
+        android:icon="@drawable/ic_person_pin_black_24dp"/>
+</menu>
